@@ -1,0 +1,570 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Placemarks</title>
+
+    <style>
+        /*span {
+            margin-left: 100px;
+        }
+        img {
+            margin-left: 50px;
+            height: 36px;
+            width: 24px;
+        }*/
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            min-width: 150px;
+            text-align: center;
+        }
+        button {
+            height: 75px;
+            width: 170px;
+            font-size: 1em;
+            background-color: lightblue;
+            margin-left: 15px;
+        }
+        h1 {
+            margin-left: 200px;
+        }
+        #color-button-blue {
+            background-color: #1774bc; // rgb(23,116,188); // "#1774bc"
+        }
+        #color-button-red {
+            background-color: #ff0000; // rgb(255,0,0); // "#ff0000"
+        }
+        #color-button-green {
+            background-color: #2fa357; // rgb(47, 163, 87); // "#2fa357"
+        }
+        #color-button-orange {
+            background-color: #f39452; // rgb(243, 148, 82); // "#f39452"
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Placemarks 5.4 vs Current (6.2.0)</h1>
+    <div style="margin-left: 50px;">
+        <button id="color-button-red">Red "#ff0000" rgb(255,0,0) </button>
+        <button id="color-button-orange">Orange "#f39452" rgb(243, 148, 82)</button>
+        <button id="color-button-green">Green "#2fa357" rgb(47, 163, 87)</button>
+        <button id="color-button-blue">Blue "#1774bc" rgb(23,116,188) </button>
+    </div>
+    <!-- <div style="float: clear; height: 20px;"></div> -->
+    <!-- <div style="margin-left: 350px;">
+        <button>Color Picker</button>
+    </div> -->
+    <div style="float: clear; height: 20px;"></div>
+    <div style="float: left;">
+        <table >
+          <tr>
+            <th>MSMV File Name</th>
+            <th>Placemark</th>
+          </tr>
+          <tr>
+            <td>blue_01.png</td>
+            <td><img src="./assets/images/blue_01.png" alt="blue_01.png"></td>
+          </tr>
+          <tr>
+            <td>blue_02.png</td>
+            <td><img src="./assets/images/blue_02.png" alt="blue_02.png"></td>
+          </tr>
+          <tr>
+            <td>deep_blue_01.png</td>
+            <td><img src="./assets/images/deep_blue_01.png" alt="deep_blue_01.png"></td>
+          </tr>
+          <tr>
+            <td>deep_blue_02.png</td>
+            <td><img src="./assets/images/deep_blue_02.png" alt="deep_blue_02.png"></td>
+          </tr>
+          <tr>
+            <td>deep_blue_03.png</td>
+            <td><img src="./assets/images/deep_blue_03.png" alt="deep_blue_03.png"></td>
+          </tr>
+          <tr>
+            <td>deep_blue_04.png</td>
+            <td><img src="./assets/images/deep_blue_04.png" alt="deep_blue_04.png"></td>
+          </tr>
+          <tr>
+            <td>green_01.png</td>
+            <td><img src="./assets/images/green_01.png" alt="green_01.png"></td>
+          </tr>
+          <tr>
+            <td>green_02.png</td>
+            <td><img src="./assets/images/green_02.png" alt="green_02.png"></td>
+          </tr>
+          <tr>
+            <td>green_03.png</td>
+            <td><img src="./assets/images/green_03.png" alt="green_03.png"></td>
+          </tr>
+          <tr>
+            <td>green_04.png</td>
+            <td><img src="./assets/images/green_04.png" alt="green_04.png"></td>
+          </tr>
+          <tr>
+            <td>pink_01.png</td>
+            <td><img src="./assets/images/pink_01.png" alt="pink_01.png"></td>
+          </tr>
+          <tr>
+            <td>red_01.png</td>
+            <td><img src="./assets/images/red_01.png" alt="red_01.png"></td>
+          </tr>
+          <tr>
+            <td>red_02.png</td>
+            <td><img src="./assets/images/red_02.png" alt="red_02.png"></td>
+          </tr>
+          <tr>
+            <td>red_03.png</td>
+            <td><img src="./assets/images/red_03.png" alt="red_03.png"></td>
+          </tr>
+          <tr>
+            <td>red_04.png</td>
+            <td><img src="./assets/images/red_04.png" alt="red_04.png"></td>
+          </tr>
+          <tr>
+            <td>red_05.png</td>
+            <td><img src="./assets/images/red_05.png" alt="red_05.png"></td>
+          </tr>
+          <tr>
+            <td>red_06.png</td>
+            <td><img src="./assets/images/red_06.png" alt="red_06.png"></td>
+          </tr>
+          <tr>
+            <td>red_07.png</td>
+            <td><img src="./assets/images/red_07.png" alt="red_07.png"></td>
+          </tr>
+          <tr>
+            <td>red_08.png</td>
+            <td><img src="./assets/images/red_08.png" alt="red_08.png"></td>
+          </tr>
+          <tr>
+            <td>red_09.png</td>
+            <td><img src="./assets/images/red_09.png" alt="red_09.png"></td>
+          </tr>
+          <tr>
+            <td>red_10.png</td>
+            <td><img src="./assets/images/red_10.png" alt="red_10.png"></td>
+          </tr>
+          <tr>
+            <td>red_11.png</td>
+            <td><img src="./assets/images/red_11.png" alt="red_11.png"></td>
+          </tr>
+          <tr>
+            <td>red_12.png</td>
+            <td><img src="./assets/images/red_12.png" alt="red_12.png"></td>
+          </tr>
+          <tr>
+            <td>red_13.png</td>
+            <td><img src="./assets/images/red_13.png" alt="red_13.png"></td>
+          </tr>
+          <tr>
+            <td>red_14.png</td>
+            <td><img src="./assets/images/red_14.png" alt="red_14.png"></td>
+          </tr>
+          <tr>
+            <td>red_15.png</td>
+            <td><img src="./assets/images/red_15.png" alt="red_15.png"></td>
+          </tr>
+          <tr>
+            <td>red_16.png</td>
+            <td><img src="./assets/images/red_16.png" alt="red_16.png"></td>
+          </tr>
+          <tr>
+            <td>red_17.png</td>
+            <td><img src="./assets/images/red_17.png" alt="red_17.png"></td>
+          </tr>
+        </table>
+    </div>
+    <div style="float: left; margin-left: 25px;">
+        <table >
+          <tr>
+            <th>Contour File Name</th>
+            <th>Placemark</th>
+          </tr>
+          <tr>
+            <td>e65a-marker-shape.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0 0z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e65b-marker-shape-circle.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0 0zM11.355 4.444c-3.63 0-6.551 2.891-6.551 6.667s2.841 6.667 6.551 6.667c3.71 0 6.551-2.891 6.551-6.667s-2.92-6.667-6.551-6.667v0 0z"></path>
+                </svg>
+
+            </td>
+          </tr>
+          <tr>
+            <td>e65c-marker-shape-square.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32v0 0c0 0 11.268-14.346 11.268-20.533 0-6.347-5.031-11.467-11.111-11.467s-11.425 5.12-11.425 11.467c0 6.026 11.268 20.533 11.268 20.533v0zM6.551 16v-9.778h9.608v9.778h-9.608z"></path>
+                </svg>
+
+            </td>
+          </tr>
+          <tr>
+            <td>e65d-marker-shape-triangle.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32v0c0 0 11.268-14.346 11.268-20.533 0-6.347-5.031-11.467-11.111-11.467s-11.425 5.12-11.425 11.467c0 6.026 11.268 20.533 11.268 20.533v0zM19.216 10.667l-12.228 6.222v-12.444l12.228 6.222z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e65e-marker-shape-diamond.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32v0c0 0 11.268-14.346 11.268-20.533 0-6.347-5.031-11.467-11.111-11.467s-11.425 5.12-11.425 11.467c0 6.026 11.268 20.533 11.268 20.533v0zM4.367 10.667l6.988-7.111 6.988 7.111-6.988 7.111-6.988-7.111z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e65f-marker-shape-star.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32v0c0 0 11.268-14.346 11.268-20.533 0-6.347-5.031-11.467-11.111-11.467s-11.425 5.12-11.425 11.467c0 6.026 11.268 20.533 11.268 20.533v0zM11.355 15.348l-4.588 2.43 0.877-5.145-3.713-3.644 5.13-0.751 2.295-4.681 2.295 4.681 5.13 0.751-3.711 3.644 0.877 5.145-4.59-2.43z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e660-marker-shape-letter-a.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM16.54 14.82l-3.438-9.486h-3.55l-3.438 9.486h3.2l0.335-1.109h3.354l0.335 1.109h3.2zM12.249 11.207h-1.845l0.922-3.058 0.922 3.058z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e661-marker-shape-letter-b.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM12.843 15.708c1.873 0 2.753-1.252 2.753-2.574 0-1.223-0.769-2.162-1.775-2.318 0.908-0.199 1.593-0.996 1.593-2.176 0-1.109-0.838-2.418-2.767-2.418h-5.66v9.486h5.856zM11.991 9.721h-2.18v-1.109h2.18c0.293 0 0.559 0.213 0.559 0.54 0 0.341-0.266 0.569-0.559 0.569zM12.075 13.319h-2.264v-1.209h2.264c0.405 0 0.657 0.27 0.657 0.612 0 0.356-0.252 0.597-0.657 0.597z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e662-marker-shape-letter-c.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM12.117 16.036c2.446 0 3.689-1.508 4.234-2.773l-2.432-1.138c-0.238 0.74-0.964 1.38-1.803 1.38-1.356 0-2.264-1.052-2.264-2.375s0.908-2.375 2.264-2.375c0.838 0 1.565 0.64 1.803 1.38l2.432-1.152c-0.559-1.308-1.789-2.759-4.234-2.759-2.921 0-5.129 1.977-5.129 4.907 0 2.916 2.208 4.907 5.129 4.907z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e663-marker-shape-letter-d.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM11.166 15.708c2.921 0 5.101-1.721 5.101-4.75s-2.18-4.736-5.115-4.736h-4.165v9.486h4.179zM11.152 13.205h-1.342v-4.48h1.356c1.509 0 2.236 0.953 2.236 2.233 0 1.195-0.838 2.247-2.25 2.247z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e664-marker-shape-letter-e.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM14.932 15.708v-2.503h-4.248v-1.038h4.151v-2.503h-4.151v-0.939h4.248v-2.503h-7.071v9.486h7.071z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e665-marker-shape-letter-f.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM10.684 15.708v-3.541h4.151v-2.503h-4.151v-0.939h4.248v-2.503h-7.071v9.486h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e666-marker-shape-letter-g.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM11.243 16.036c1.831 0 3.228-0.754 4.262-1.92v-3.883h-4.542v2.503h1.733v0.341c-0.293 0.228-0.922 0.427-1.453 0.427-1.356 0-2.264-1.052-2.264-2.375s0.908-2.375 2.264-2.375c0.838 0 1.453 0.597 1.719 1.18l2.376-1.237c-0.587-1.223-1.873-2.475-4.095-2.475-2.823 0-5.129 1.863-5.129 4.907 0 3.029 2.306 4.907 5.129 4.907z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e667-marker-shape-letter-h.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM15.974 15.708v-9.486h-2.823v3.356h-3.34v-3.356h-2.823v9.486h2.823v-3.627h3.34v3.627h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e668-marker-shape-letter-i.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M11.268 32c0 0-11.268-14.507-11.268-20.533 0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533v0zM12.431 15.708v-9.486h-2.823v9.486h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e669-marker-shape-letter-j.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM10.46 15.879c2.166 0 3.606-1.124 3.606-3.556v-6.101h-2.823v6.059c0 0.668-0.419 1.067-1.034 1.067-0.475 0-0.894-0.213-1.202-0.427l-1.146 2.19c0.727 0.569 1.691 0.768 2.599 0.768z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66a-marker-shape-letter-k.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.862 15.708l-3.675-5.077 3.522-4.409h-3.452l-2.446 3.556v-3.556h-2.823v9.486h2.823v-2.631l0.517-0.711 2.096 3.342h3.438z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66b-marker-shape-letter-l.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM14.22 15.708v-2.503h-3.536v-6.983h-2.823v9.486h6.359z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66c-marker-shape-letter-m.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM17.183 15.708v-9.486h-3.899l-1.635 4.551-1.635-4.551h-3.899v9.486h2.823v-5.703l2.082 5.703h1.258l2.082-5.703v5.703h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66d-marker-shape-letter-n.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.96 15.708v-9.486h-2.823v4.494l-3.242-4.494h-2.907v9.486h2.823v-4.807l3.438 4.807h2.711z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66e-marker-shape-letter-o.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.215 16.036c2.879 0 5.101-1.991 5.101-4.907s-2.222-4.907-5.101-4.907c-2.879 0-5.101 1.991-5.101 4.907s2.222 4.907 5.101 4.907zM11.215 13.504c-1.356 0-2.236-1.052-2.236-2.375s0.88-2.375 2.236-2.375c1.356 0 2.236 1.052 2.236 2.375s-0.88 2.375-2.236 2.375z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e66f-marker-shape-letter-p.svg</td>
+            <td>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM10.684 15.708v-2.987h2.152c2.18 0 3.354-1.479 3.354-3.243 0-1.778-1.174-3.257-3.354-3.257h-4.975v9.486h2.823zM12.473 10.219h-1.789v-1.493h1.789c0.475 0 0.852 0.242 0.852 0.754 0 0.498-0.377 0.74-0.852 0.74z"></path>
+            </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e670-marker-shape-letter-q.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.215 16.036c0.643 0 1.258-0.1 1.831-0.284l0.657 0.825 1.957-1.593-0.503-0.64c0.727-0.825 1.16-1.934 1.16-3.214 0-2.916-2.222-4.907-5.101-4.907s-5.101 1.991-5.101 4.907c0 2.916 2.222 4.907 5.101 4.907zM11.215 13.504c-1.356 0-2.236-1.052-2.236-2.375s0.88-2.375 2.236-2.375c1.356 0 2.236 1.052 2.236 2.375 0 0.313-0.042 0.597-0.14 0.868l-0.699-0.91-1.957 1.593 0.643 0.825h-0.084z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e671-marker-shape-letter-r.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.331 15.708l-1.691-3.356c0.741-0.37 1.677-1.237 1.677-2.873 0-1.778-1.174-3.257-3.354-3.257h-4.975v9.486h2.823v-2.987h1.020l1.286 2.987h3.214zM11.53 10.219h-1.719v-1.493h1.719c0.475 0 0.922 0.228 0.922 0.74 0 0.526-0.447 0.754-0.922 0.754z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e672-marker-shape-letter-s.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.32 16.021c2.502 0 4.025-1.209 4.025-3.3 0-3.527-5.185-2.759-5.185-3.655 0-0.242 0.154-0.427 0.713-0.427 0.88 0 1.929 0.313 2.739 0.939l1.509-2.034c-1.062-0.882-2.432-1.323-3.955-1.323-2.557 0-3.871 1.536-3.871 3.143 0 3.74 5.199 2.816 5.199 3.726 0 0.37-0.503 0.512-1.034 0.512-1.258 0-2.306-0.54-3.005-1.223l-1.467 2.133c0.992 0.91 2.348 1.508 4.332 1.508z"></path>
+                </svg>
+
+            </td>
+          </tr>
+          <tr>
+            <td>e673-marker-shape-letter-t.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM13.186 15.708v-6.983h2.488v-2.503h-7.812v2.503h2.502v6.983h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e674-marker-shape-letter-u.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.599 15.879c3.144 0 4.598-1.721 4.598-4.082v-5.575h-2.865v5.49c0 0.91-0.587 1.636-1.733 1.636-1.16 0-1.747-0.725-1.747-1.636v-5.49h-2.865v5.589c0 2.347 1.467 4.068 4.612 4.068z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e675-marker-shape-letter-v.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM13.102 15.708l3.438-9.486h-3.2l-2.012 6.386-2.012-6.386h-3.2l3.438 9.486h3.55z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e676-marker-shape-letter-w.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.366 15.708l2.669-9.486h-3.172l-1.188 5.803-1.412-5.803h-2.124l-1.412 5.803-1.202-5.803h-3.158l2.669 9.486h2.963l1.202-5.376 1.202 5.376h2.963z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e677-marker-shape-letter-x.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM16.176 15.708l-3.116-4.878 2.907-4.608h-3.34l-1.481 2.702-1.509-2.702h-3.312l2.907 4.622-3.116 4.864h3.326l1.705-2.901 1.705 2.901h3.326z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e678-marker-shape-letter-y.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM12.431 15.708v-3.769l3.466-5.717h-3.172l-1.705 3.2-1.733-3.2h-3.172l3.494 5.717v3.769h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e679-marker-shape-letter-z.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.24 15.708v-2.503h-3.662l3.564-4.722v-2.261h-7.281v2.503h3.55l-3.55 4.708v2.276h7.379z"></path>
+                </svg>
+
+            </td>
+          </tr>
+
+      </table>
+      </div>
+      <div style="float: left; margin-left: 25px;">
+      <table>
+          <tr>
+            <th>Contour File Name</th>
+            <th>Placemark</th>
+          </tr>
+          <tr>
+            <td>e67a-marker-shape-number-1.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM13.856 15.708v-9.486h-2.432l-3.564 3.556 1.593 1.692 1.579-1.593v5.831h2.823z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e67b-marker-shape-number-2.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM15.448 16v-2.503h-3.033c2.222-1.493 2.949-2.56 2.949-3.854 0-1.906-1.579-3.271-3.997-3.271-1.3 0-2.865 0.441-3.941 1.607l1.537 1.906c0.713-0.612 1.467-0.981 2.46-0.981 0.601 0 1.076 0.284 1.076 0.74 0 0.711-0.405 1.067-4.668 4.124v2.233h7.616z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e67c-marker-shape-number-3.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.012 16.021c2.418 0 4.053-1.152 4.053-2.844 0-1.308-1.174-2.105-2.208-2.219 1.188-0.199 2.054-1.095 2.054-2.105 0-1.564-1.314-2.631-3.885-2.631-1.817 0-3.089 0.64-3.913 1.564l1.328 1.792c0.643-0.54 1.481-0.825 2.278-0.825 0.811 0 1.384 0.171 1.384 0.612 0 0.299-0.391 0.469-1.286 0.469-0.335 0-1.174 0-1.356-0.014v2.546c0.14-0.014 0.95-0.028 1.356-0.028 1.244 0 1.439 0.185 1.439 0.512 0 0.341-0.433 0.64-1.356 0.64-0.713 0-1.803-0.27-2.53-0.91l-1.384 1.963c0.783 0.853 2.18 1.479 4.025 1.479z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e67d-marker-shape-number-4.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM14.297 15.708v-1.522h1.076v-2.503h-1.076v-5.461h-3.913l-3.396 5.76v2.204h4.486v1.522h2.823zM11.474 11.684h-1.761l1.761-2.987v2.987z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e67e-marker-shape-number-5.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM10.641 16.171c2.613 0 4.151-1.351 4.151-3.442 0-1.892-1.412-3.1-3.005-3.1-0.783 0-1.495 0.284-1.943 0.725v-1.337h4.304v-2.503h-7.127v5.76l1.943 0.455c0.475-0.455 1.020-0.654 1.733-0.654 0.866 0 1.23 0.356 1.23 0.782 0 0.398-0.377 0.782-1.314 0.782-0.811 0-1.719-0.284-2.362-0.825l-1.509 2.020c0.908 0.839 2.236 1.337 3.899 1.337z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e67f-marker-shape-number-6.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM10.997 16.171c2.208 0 3.871-1.351 3.871-3.413 0-2.020-1.621-3.143-3.298-3.143-0.853 0-1.691 0.341-2.166 0.967v-0.028c0-1.152 1.118-1.65 2.040-1.65 0.685 0 1.188 0.128 1.719 0.512l1.188-2.219c-0.741-0.512-1.845-0.825-2.907-0.825-2.893 0-4.891 1.735-4.891 4.907 0 2.773 1.384 4.892 4.444 4.892zM10.815 13.639c-0.978 0-1.37-0.569-1.425-1.209 0.377-0.299 0.838-0.384 1.314-0.384 0.559 0 1.3 0.213 1.3 0.825 0 0.398-0.475 0.768-1.188 0.768z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e680-marker-shape-number-7.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.853 16l3.103-7.495v-1.991h-7.616v2.503h4.374l-2.949 6.983h3.089z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e681-marker-shape-number-8.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM11.542 16.171c2.068 0 4.151-0.768 4.151-2.702 0-1.024-0.727-1.906-1.789-2.361 0.978-0.412 1.635-1.081 1.635-2.19 0-1.863-2.082-2.546-3.997-2.546s-3.997 0.683-3.997 2.546c0 1.109 0.643 1.778 1.621 2.19-1.062 0.455-1.775 1.337-1.775 2.361 0 1.934 2.082 2.702 4.151 2.702zM11.542 9.998c-0.573-0.085-1.132-0.356-1.132-0.654 0-0.384 0.419-0.64 1.132-0.64 0.699 0 1.118 0.256 1.118 0.64 0 0.299-0.545 0.569-1.118 0.654zM11.542 13.838c-0.797 0-1.286-0.299-1.286-0.697 0-0.37 0.685-0.654 1.286-0.74 0.587 0.085 1.286 0.37 1.286 0.74 0 0.398-0.517 0.697-1.286 0.697z"></path>
+                </svg>
+
+            </td>
+          </tr>
+          <tr>
+            <td>e682-marker-shape-number-9.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM10.766 16.156c2.893 0 4.891-1.735 4.891-4.907 0-2.773-1.384-4.892-4.444-4.892-2.208 0-3.871 1.351-3.871 3.413 0 2.020 1.621 3.143 3.298 3.143 0.852 0 1.691-0.341 2.166-0.967v0.043c0 0.924-0.852 1.636-2.040 1.636-0.685 0-1.188-0.128-1.719-0.512l-1.188 2.219c0.741 0.512 1.845 0.825 2.907 0.825zM11.507 10.482c-0.559 0-1.3-0.213-1.3-0.825 0-0.398 0.475-0.768 1.174-0.768 0.992 0 1.384 0.569 1.439 1.209-0.377 0.299-0.838 0.384-1.314 0.384z"></path>
+                </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>e683-marker-shape-number-10.svg</td>
+            <td>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="32" viewBox="0 0 23 32">
+                    <path d="M0 11.467c0-6.347 5.346-11.467 11.425-11.467s11.111 5.12 11.111 11.467c0 6.187-11.268 20.533-11.268 20.533s-11.268-14.507-11.268-20.533v0zM9.525 16v-9.486h-2.432l-3.564 3.556 1.593 1.692 1.579-1.593v5.831h2.823zM15.167 16.171c2.781 0 4.137-2.332 4.137-4.907s-1.356-4.892-4.137-4.892c-2.781 0-4.137 2.318-4.137 4.892s1.356 4.907 4.137 4.907zM15.167 13.639c-0.894 0-1.3-0.768-1.3-2.375s0.405-2.361 1.3-2.361c0.894 0 1.3 0.754 1.3 2.361s-0.405 2.375-1.3 2.375z"></path>
+                </svg>
+            </td>
+          </tr>
+
+        </table>
+    </div>
+    <script>
+        var colorButtonBlue = document.getElementById("color-button-blue"),
+            colorButtonRed = document.getElementById("color-button-red"),
+            colorButtonGreen = document.getElementById("color-button-green"),
+            colorButtonOrange = document.getElementById("color-button-orange"),
+            placemarks = document.getElementsByTagName("svg");
+
+        function changeColor (color) {
+            for (var i=0; i< placemarks.length; i++) {
+                placemarks[i].style.fill = color;
+            }
+        };
+
+        colorButtonBlue.addEventListener("click", function(){
+            console.log("lightblue colorButton clicked");
+            changeColor("#1774bc");
+        });
+        colorButtonRed.addEventListener("click", function(){
+            console.log("red colorButton clicked");
+            changeColor("#ff0000");
+        });
+        colorButtonGreen.addEventListener("click", function(){
+            console.log("lightgreen clicked");
+            changeColor("#2fa357");
+        });
+        colorButtonOrange.addEventListener("click", function(){
+            console.log("orange clicked");
+            changeColor("#f39452");
+        });
+    </script>
+</body>
+</html>
